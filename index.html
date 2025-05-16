@@ -1,24 +1,192 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tela de Login</title>
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Sua Loja de Tecnologia</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-50 font-sans">
 
-  <div class="login-container">
-    <h2>Login</h2>
-    <form action="#" method="post">
-      <input type="text" name="username" placeholder="Usuário" required>
-      <input type="password" name="password" placeholder="Senha" required>
-      <input type="submit" value="Entrar">
-    </form>
-    <div class="footer">
-      Esqueceu a senha?
+    <!-- Barra de navegação -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-laptop-code text-2xl text-blue-600"></i>
+                <span class="text-xl font-bold text-gray-800">TechStore</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Início</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Produtos</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Ofertas</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Contato</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="relative">
+                    <i class="fas fa-shopping-cart text-xl text-gray-700 hover:text-blue-600"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white py-2 px-4 shadow-md">
+            <a href="#" class="block py-2 text-gray-800 hover:text-blue-600">Início</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-blue-600">Produtos</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-blue-600">Ofertas</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-blue-600">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">As Melhores Ofertas de Tecnologia</h1>
+            <p class="text-xl mb-6">Descontos de até 30% em produtos selecionados</p>
+            <button class="bg-white text-blue-600 font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition duration-300">
+                Compre Agora
+            </button>
+        </div>
     </div>
-  </div>
+
+    <!-- Produtos -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold text-gray-800">Produtos em Destaque</h2>
+            <div class="flex space-x-2">
+                <button class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Todos</button>
+                <button class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Notebooks</button>
+                <button class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Acessórios</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- Produto 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45" alt="Notebook Dell" class="w-full h-48 object-cover">
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Oferta</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Notebook Dell XPS 13</h3>
+                    <p class="text-gray-600 text-sm mb-2">Intel Core i7, 16GB RAM, SSD 512GB</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-lg text-blue-600">R$ 6.499,00</span>
+                        <span class="text-sm text-gray-500 line-through">R$ 7.299,00</span>
+                    </div>
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="MacBook Pro" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">MacBook Pro M1</h3>
+                    <p class="text-gray-600 text-sm mb-2">Apple M1, 8GB RAM, SSD 256GB</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-lg text-blue-600">R$ 8.999,00</span>
+                    </div>
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7" alt="Mouse" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Mouse Sem Fio Logitech</h3>
+                    <p class="text-gray-600 text-sm mb-2">Bluetooth, 2400DPI, Bateria Recarregável</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-lg text-blue-600">R$ 199,00</span>
+                    </div>
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1592155931584-901ac15763e3" alt="Teclado" class="w-full h-48 object-cover">
+                    <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Novo</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Teclado Mecânico RGB</h3>
+                    <p class="text-gray-600 text-sm mb-2">Switches Red, ABNT2, Retroiluminação</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-lg text-blue-600">R$ 349,00</span>
+                    </div>
+                    <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TechStore</h3>
+                    <p class="text-gray-400">A melhor loja de tecnologia do Brasil, com os melhores preços e produtos de qualidade.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trocas e Devoluções</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Atendimento</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Segunda a Sexta: 9h às 18h</li>
+                        <li>Sábado: 9h às 13h</li>
+                        <li>sac@techstore.com.br</li>
+                        <li>(11) 1234-5678</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <h4 class="font-bold mt-6 mb-2">Formas de Pagamento</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <i class="fab fa-cc-visa text-2xl text-gray-400"></i>
+                        <i class="fab fa-cc-mastercard text-2xl text-gray-400"></i>
+                        <i class="fab fa-cc-amex text-2xl text-gray-400"></i>
+                        <i class="fab fa-cc-paypal text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 TechStore. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
